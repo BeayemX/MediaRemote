@@ -1,6 +1,11 @@
 # Introduction
 **Media Remote** makes it possible to send media key inputs to your PC from any other device via a website. This means that you can use your smartphone as a remote control for your sound system connected to your PC.
 
+MediaRemote consists of three parts:
++ `receiver` to react to media key inputs
++ `website` which acts as the user interface to send input
++ `server` to act as a relay to pass input coming from the website to the correct device
+
 # Requirements
 **Python**  
 The scripts are written in Python therefore Python must be installed on your system. For Linux systems this should already be the case.
@@ -19,7 +24,13 @@ Depending on the linux distribution it can be installed with something along the
 sudo apt install xdotool
 ```
 
-# Workflow
+# Installation
+To start using MediaRemote download this repository or use `Git` to clone it like this:
+```
+git clone https://github.com/BeayemX/MediaRemote.git
+cd ./MediaRemote/
+```
+
 ## Receiver
 The receiver is your device where your music is playing and which will react to the media key inputs.
 To start listening for input you have to start it like this:
