@@ -1,5 +1,7 @@
 # Introduction
-**Media Remote** makes it possible to send media key inputs to your PC from any other device via a website. This means that you can use your smartphone as a remote control for your sound system connected to your PC.
+**Media Remote** makes it possible to send media key inputs to your PC from any other device via a website. This means that you can use your smartphone as a remote control for your sound system connected to your PC. 
+
+This implementation is independent of the media player you are using as long as the player supports media-key input.
 
 MediaRemote consists of three parts:
 + `receiver` to react to media key inputs
