@@ -28,5 +28,5 @@ def mute():
 
 
 def _process_key(keycode):
-    args = ['xdotool', 'key', keycode]
+    args = ['/usr/bin/xdotool', 'key', keycode]
     subprocess.run(args)
