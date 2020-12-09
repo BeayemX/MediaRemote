@@ -1,0 +1,15 @@
+[Unit]
+Description=MediaRemote Receiver
+After=multi-user.target
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/home/user/MediaRemote/src/receiver/
+Type=idle
+ExecStart=/usr/bin/python3 -u /home/user/MediaRemote/src/receiver/receiver.py
+User=user
+Group=user
+
+[Install]
+WantedBy=multi-user.target
