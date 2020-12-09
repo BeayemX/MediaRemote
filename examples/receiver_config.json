@@ -1,0 +1,6 @@
+{
+    "uri": "ws://localhost:8001",
+    "token": "yourSecretToken",
+    "device": "Music PC",
+    "debug": false
+}

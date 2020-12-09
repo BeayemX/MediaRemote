@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Media Remote</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+    <meta name="theme-color" content="#333" />
+
+    <!--crossorigin="use-credentials" is needed if manifest is behind auth -->
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg" href="images/icon-512.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/websocket.js"></script>
+</head>
+
+<body onload="onLoad()">
+    <div id="wrapper">
+
+        <div id="connection" class="buttons">
+            <input id="token"/>
+            <select name="clients" id="clientselect" onchange="clientAddressChanged(this.value)"></select>
+        </div>
+
+        <div id="remotebuttons">
+            <div class="row">
+                <div class="spacerbutton"></div>
+
+                <div class="button" onclick="call('volume_up')">
+                    <img src="images/VolumeUp.svg"/>
+                </div>
+
+                <div class="spacerbutton"></div>
+            </div>
+
+            <div class="row">
+                <div class="button" onclick="call('previous')">
+                    <img src="images/Previous.svg"/>
+                </div>
+                <div class="button" onclick="call('play')">
+                    <img src="images/Play.svg"/>
+                </div>
+                <div class="button" onclick="call('next')">
+                    <img src="images/Next.svg"/>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="spacerbutton"></div>
+
+                <div class="button" onclick="call('volume_down')">
+                    <img src="images/VolumeDown.svg"/>
+                </div>
+
+                <div class="spacerbutton"></div>
+            </div>
+
+        </div>
+        <div id="footer">
+            Media Remote by Pixel Packers
+        </div>
+
+    </div>
+</body>
+
+</html>
