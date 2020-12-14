@@ -11,7 +11,7 @@ MediaRemote consists of three parts:
 MediaRemote uses WebSockets as the underlying transfer technology. This makes it possible to connect your devices immediately and transport messages in realtime. As soon as a new receiver is started you will see the device listed on your website.
 
 # Limitations / Known issues
-For now the MediaRemote receiver ohnly works on Linux because `xdotools` is only available for this platform. See #1.
+For now the MediaRemote receiver ohnly works on Linux because `xdotools` is only available for this platform. See [Issue #1](https://github.com/BeayemX/MediaRemote/issues/1).
 
 MediaRemote does only send key-input to the receiver, it is not possible to know if the input has been handled. It is also not possible to receive information regarding the playing audio like artist or song title.
 
