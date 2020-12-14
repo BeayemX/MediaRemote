@@ -10,6 +10,8 @@ Type=idle
 ExecStart=/usr/bin/python3 -u /home/user/MediaRemote/src/receiver/receiver.py
 User=user
 Group=user
+Environment=DISPLAY=:0
 
 [Install]
 WantedBy=multi-user.target
+
