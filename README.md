@@ -10,6 +10,10 @@ MediaRemote consists of three parts:
 + 
 MediaRemote uses WebSockets as the underlying transfer technology. This makes it possible to connect your devices immediately and transport messages in realtime. As soon as a new receiver is started you will see the device listed on your website.
 
+The basic architecture is shown in this graphic:
+
+![](documentation/images/ArchitectureSendingInput.svg)
+
 # Limitations / Known issues
 For now the MediaRemote receiver only works on Linux because `xdotools` is only available for this platform. See [Issue #1](https://github.com/BeayemX/MediaRemote/issues/1).
 
