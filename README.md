@@ -7,7 +7,7 @@ MediaRemote consists of three parts:
 + `receiver` to react to media key inputs
 + `website` which acts as the user interface to send input
 + `server` to act as a relay to pass input coming from the website to the correct device
-+ 
+
 MediaRemote uses WebSockets as the underlying transfer technology. This makes it possible to connect your devices immediately and transport messages in realtime. As soon as a new receiver is started you will see the device listed on your website.
 
 The basic architecture is shown in this graphic:
