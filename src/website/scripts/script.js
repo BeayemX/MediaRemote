@@ -13,7 +13,7 @@ function onLoad() {
     tokenInput = document.querySelector('#token');
 
     // Set default values
-    tokenInput.value = localStorage.getItem('token') || "Enter your token here!";
+    tokenInput.value = localStorage.getItem('token');
 
     // tokenInput.onkeydown = updateToken;
     tokenInput.onchange = updateToken;
