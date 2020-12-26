@@ -30,6 +30,9 @@ div {
     align-items: center;
     overflow: hidden;
 }
+.button:active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
 
 .spacerbutton{
     flex: 1;
