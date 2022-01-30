@@ -9,6 +9,7 @@ function connectToWebSocket() {
     // Connect to websockets
     ws.addEventListener('open', (event) => {
         console.log("Connected");
+        onConnected();
     });
 
     ws.addEventListener('message', (event) => {
@@ -32,6 +33,7 @@ function connectToWebSocket() {
             console.log("Trying to reconnect...")
             connectToWebSocket()
         }, RECONNECT_TIMEOUT);
+        onDisconnected();
     });
 
     ws.addEventListener('error', (event) => {
@@ -52,4 +54,14 @@ function send(sendData) {
 
 function reconnect() {
     connectToWebSocket();
+}
+
+
+function onConnected() {
+    wrapper.classList.remove('disconnected')
+}
+
+function onDisconnected() {
+    wrapper.classList.add('disconnected');
+
 }
