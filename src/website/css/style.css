@@ -9,6 +9,7 @@ body {
 
     color: #fff;
     font-size: 18pt;
+    display: flex;
 }
 div {
 }
@@ -60,7 +61,6 @@ div {
     padding: 0px;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 img {
     object-fit: fill;
