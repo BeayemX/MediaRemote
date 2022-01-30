@@ -27,6 +27,7 @@ function updateToken(e) {
     reconnect();
 }
 
+/*
 function makePostRequest(data, callback) {
     clientURL = clientSelect.value;
 
@@ -46,7 +47,7 @@ function makePostRequest(data, callback) {
             callback(data);
         }
     }
-}
+} */
 
 function call(action) {
     const data = {

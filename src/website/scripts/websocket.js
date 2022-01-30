@@ -9,7 +9,6 @@ function connectToWebSocket() {
     // Connect to websockets
     ws.addEventListener('open', (event) => {
         console.log("Connected");
-        onConnected();
     });
 
     ws.addEventListener('message', (event) => {
@@ -24,16 +23,18 @@ function connectToWebSocket() {
         } else if (jsonData['message_type'] == 'device_list_update') {
             const devices = jsonData['devices'];
             rebuildClientSelection(devices);
+            onReadyToUse();
         }
     });
 
     ws.addEventListener('close', (event) => {
-        console.log("Websocket close");
+        console.log("WebSocket close");
+        onDisconnected();
+
         setTimeout(() => {
             console.log("Trying to reconnect...")
             connectToWebSocket()
         }, RECONNECT_TIMEOUT);
-        onDisconnected();
     });
 
     ws.addEventListener('error', (event) => {
@@ -53,15 +54,15 @@ function send(sendData) {
 }
 
 function reconnect() {
+    onDisconnected();
     connectToWebSocket();
 }
 
 
-function onConnected() {
+function onReadyToUse() {
     wrapper.classList.remove('disconnected')
 }
 
 function onDisconnected() {
     wrapper.classList.add('disconnected');
-
 }
